@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Name - Personal Page</title>
+        <!-- Link to the external CSS file -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+<body>
+
+    <h1>Your Name</h1>
+
+    <p>Major: Computer Science</p>
+    <p>Year of University Enrollment: 2023</p>
+    <p>GitHub Profile: <a href="https://github.com/username" target="_blank">Visit my GitHub</a></p>
+
+    <h2>Personal Summary</h2>
+    <p>
+        I am a passionate developer with a strong interest in web development, data science, and artificial intelligence. I enjoy learning new programming languages and improving my problem-solving skills.
+    </p>
+
+    <h2>Skills</h2>
+    <table>
+        <tr>
+            <th>Skill</th>
+            <th>Level</th>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Expert</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Basic</td>
+        </tr>
+        <tr>
+            <td>HTML/CSS</td>
+            <td>Basic</td>
+        </tr>
+        <tr>
+            <td>Git</td>
+            <td>Basic</td>
+        </tr>
+        <tr>
+            <td>Excel</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td>Expert</td>
+        </tr>
+        <tr>
+            <td>Ruby</td>
+            <td>Basic</td>
+        </tr>
+        <tr>
+            <td>English</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>Spanish</td>
+            <td>Native</td>
+        </tr>
+    </table>
+
+    <div class="input-section">
+        <input type="text" id="inputField" placeholder="Enter text to change section">
+        <button class="button" onclick="changeContent()">Change Content</button>
+    </div>
+
+    <div id="changeableSection">
+        <h3>This section will change when you press the button.</h3>
+    </div>
+
+    <script>
+        function changeContent() {
+            var input = document.getElementById('inputField').value;
+            document.getElementById('changeableSection').innerHTML = "<h3>" + input + "</h3>";
+        }
+    </script>
+
+</body>
+</html>
