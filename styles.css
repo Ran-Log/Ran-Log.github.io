@@ -29,10 +29,6 @@ th {
     color: white;
 }
 
-hr {
-    border: 1px solid #000; /* Black solid line */
-    margin: 20px 0; /* Add space around the line */
-  }
 
 .button {
     background-color: #3498db;
@@ -50,10 +46,3 @@ hr {
     margin: 20px auto;
     text-align: center;
 }
-
-.separator {
-    width: 100%; /* Full width of the container */
-    height: 2px; /* Line thickness */
-    background-color: #4CAF50; /* Line color */
-    margin: 20px 0; /* Space around the line */
-  }
