@@ -11,13 +11,13 @@
     <h1>Jorge Andrés Beltrán Arancibia</h1>
 
     <hr>
-    
+
     <h2>Professional Info</h2>
 
     <p>Major: Engineer on Computer Science</p>
     <p>Year of University Enrollment: 2021</p>
     <p>GitHub Profile: <a href="https://github.com/Ran-L0g" target="_blank">Click here to go to my GitHub Profile 🐟</a></p>
-    <p>Art Portfolio: Ask for the link :P </p>
+    <p>Art Portfolio: Ask for the link  ┐(￣∀￣)┌ </p>
 
     <hr>
 
@@ -26,7 +26,7 @@
         - I'm an Engineer on Computer Science Student at Universidad de los Andes (located in Chile).<br><br>
         - Since 2024 I started learning the basics of Computer Science there, from programming languages (Python, C++, JavaScript, SQL, etc) to how computers work.<br><br>
         - I am extremely passionate about Data Science, I'll probably work in that after getting my degree.<br><br>
-        - I also work as a Hobbyist Digital Artist, where I specialize in drawing characters more than background, tho I'm working on that too (I give my "porfolio" to people that ask).<br><br>
+        - I also work as a Hobbyist Digital Artist, where I specialize in drawing characters. I still haven't learned backgrounds σ(￣、￣〃)<br><br>
     </p>
 
     <hr>
@@ -90,13 +90,13 @@
     <hr>
 
     <div class="input-section">
-        <input type="text" id="inputField" placeholder="Enter text to change section">
+        <input type="text" id="inputField" placeholder="Enter text here">
         <button class="button" onclick="changeContent()">Change Content</button>
     </div>
 
     
     <div id="changeableSection">
-        <h3>Whoa, This part changes when you press the button. Isn't it amazing, "We got technology at home aah button"</h3>
+        <h3>Whoa, This part changes when you press the button. Isn't it amazing, "We got technology at home aah button" (*￣▽￣)b</h3>
     </div>
 
     <script>
@@ -104,6 +104,12 @@
             var input = document.getElementById('inputField').value;
             document.getElementById('changeableSection').innerHTML = "<h3>" + input + "</h3>";
         }
+
+                document.getElementById('inputField').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                changeContent();
+            }
+        });
     </script>
 
 </body>

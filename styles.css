@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #c2e1fd;
+    background-color: #c998b97d;
     color: #333;
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #b65959;
+    color: #db3939;
     margin-top: 20px;
 }
 
@@ -23,6 +23,10 @@ h3 {
     text-align: center;
     color: #ad4444;
     margin-top: 30px;
+}
+
+h1, h2{
+    -webkit-text-stroke: 1px #00000087;
 }
 
 p {
