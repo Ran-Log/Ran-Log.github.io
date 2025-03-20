@@ -2,118 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ran-Log's Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
-<body>
+<body style="background-color: #D8BFD8;;" class="text-dark">
 
-    <h1>Jorge Andrés Beltrán Arancibia</h1>
+    <div class="container mt-4">
+        <h1 class="text-center text-dark fw-bold">Jorge Andrés Beltrán Arancibia</h1>
 
-    <hr>
+        <hr style="border: 2px solid #6113aa; opacity: 1;">
 
-    <h2>Professional Info</h2>
+        <h2 class="text-secondary"><p class="text-decoration-underline">Professional Info</p></h2>
 
-    <p>Major: Engineer on Computer Science</p>
-    <p>Year of University Enrollment: 2021</p>
-    <p>GitHub Profile: <a href="https://github.com/Ran-L0g" target="_blank">Click here to go to my GitHub Profile 🐟</a></p>
-    <p>Art Portfolio: Ask for the link  <br><br>
-    ┐(￣∀￣)┌ </p>
+        <p><strong>Major:</strong> Engineer on Computer Science</p>
+        <p><strong>Year of University Enrollment:</strong> 2021</p>
+        <p><strong>GitHub Profile:</strong> 
+            <a href="https://github.com/Ran-L0g" target="_blank" style="color: #0f71bc;">Click here to go to my GitHub Profile 🐟</a>
+        </p>
+        <p><strong>Art Portfolio:</strong> Ask for the link <br> ┐(￣∀￣)┌</p>
 
-    <hr>
+        <hr style="border: 2px solid #6113aa; opacity: 1;">
 
-    <h2>Personal Summary</h2>
-    <p>
-        - I'm an Engineer on Computer Science Student at Universidad de los Andes (located in Chile).<br><br>
-        - Since 2024 I started learning the basics of Computer Science there, from programming languages (Python, C++, JavaScript, SQL, etc) to how computers work.<br><br>
-        - I am extremely passionate about Data Science, I'll probably work in that after getting my degree.<br><br>
-        - I also work as a Hobbyist Digital Artist, where I specialize in drawing character designs. I still haven't learned backgrounds <br><br>
-        σ(￣、￣〃)<br><br>
-    </p>
+        <h2 class="text-secondary"><p class="text-decoration-underline">Personal Summary</p></h2>
+        <p>
+            - I'm an Engineer on Computer Science Student at Universidad de los Andes (Chile).<br>
+            - Since 2024, I started learning Computer Science, from programming languages (Python, C++, JavaScript, SQL, etc) to how computers work.<br>
+            - I am extremely passionate about Data Science and will likely work in that field.<br>
+            - I also work as a Hobbyist Digital Artist, specializing in character designs (Still learning backgrounds σ(￣、￣〃)).
+        </p>
 
-    <hr>
+        <hr style="border: 2px solid #6113aa; opacity: 1;">
 
-    <h2>Skills</h2>
-    <table>
-        <tr>
-            <th>Skill</th>
-            <th>Level</th>
-        </tr>
-        <tr>
-            <td>Python</td>
-            <td>Medium</td>
-        </tr>
-        <tr>
-            <td>C++</td>
-            <td>Medium</td>
-        </tr>
-        <tr>
-            <td>JavaScript</td>
-            <td>Basic</td>
-        </tr>
-        <tr>
-            <td>HTML/CSS</td>
-            <td>Basic</td>
-        </tr>
-        <tr>
-            <td>Excel</td>
-            <td>Advanced</td>
-        </tr>
-        <tr>
-            <td>SQL</td>
-            <td>Expert</td>
-        </tr>
-        <tr>
-            <td>Ruby</td>
-            <td>No knowledge</td>
-        </tr>
-        <tr>
-            <td>English</td>
-            <td>Almost Native, C2</td>
-        </tr>
-        <tr>
-            <td>Spanish</td>
-            <td>Native</td>
-        </tr>
-        <tr>
-            <td>Japanese</td>
-            <td>Basic</td>
-        </tr>
-        <tr>
-            <td>Digital Art</td>
-            <td>Advanced</td>
-        </tr>
-        <tr>
-            <td>Video Editing</td>
-            <td>Above Medium</td>
-        </tr>
-    </table>
+        <h2 class="text-secondary"><p class="text-decoration-underline">Skills</p></h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped text-center">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Skill</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Python</td><td>Medium</td></tr>
+                    <tr><td>C++</td><td>Medium</td></tr>
+                    <tr><td>JavaScript</td><td>Basic</td></tr>
+                    <tr><td>HTML/CSS</td><td>Basic</td></tr>
+                    <tr><td>Excel</td><td>Advanced</td></tr>
+                    <tr><td>SQL</td><td>Expert</td></tr>
+                    <tr><td>Ruby</td><td>No knowledge</td></tr>
+                    <tr><td>English</td><td>Almost Native, C2</td></tr>
+                    <tr><td>Spanish</td><td>Native</td></tr>
+                    <tr><td>Japanese</td><td>Basic</td></tr>
+                    <tr><td>Digital Art</td><td>Advanced</td></tr>
+                    <tr><td>Video Editing</td><td>Above Medium</td></tr>
+                </tbody>
+            </table>
+        </div>
 
-    <hr>
+        <hr style="border: 2px solid #6113aa; opacity: 1;">
 
-    <div class="input-section">
-        <input type="text" id="inputField" placeholder="Enter text here">
-        <button class="button" onclick="changeContent()">Change Content</button>
-    </div>
 
-    
-    <div id="changeableSection">
-        <h3>Whoa, This part changes when you press the button. <br><br>
-            (*￣▽￣)b</h3>
+        <div class="mb-3">
+            <label for="inputField" class="form-label">Enter text here:</label>
+            <input type="text" id="inputField" class="form-control" placeholder="Type something...">
+        </div>
+        <button class="btn btn-dark" onclick="changeContent()">Change Content</button>
+
+        <div id="changeableSection" class="mt-4 text-center">
+            <h3 class="text-secondary">Whoa, This part changes when you press the button. <br> (*￣▽￣)b</h3>
+        </div>
+
+
+
+        <hr style="border: 2px solid #6113aa; opacity: 1;">
+
+        <h2 class="text-secondary"><p class="text-decoration-underline">Latest Tech News</p></h2>
+        <button class="btn btn-dark mb-3" onclick="fetchNews()">Load News</button>
+
+        <div id="newsSection" class="row">
+        </div>
+
     </div>
 
     <script>
         function changeContent() {
             var input = document.getElementById('inputField').value;
-            document.getElementById('changeableSection').innerHTML = "<h3>" + input + "</h3>";
+            document.getElementById('changeableSection').innerHTML = "<h3 class='text-secondary'>" + input + "</h3>";
         }
 
-                document.getElementById('inputField').addEventListener('keydown', function(event) {
+        document.getElementById('inputField').addEventListener('keydown', function(event) {
             if (event.key === 'Enter') {
                 changeContent();
             }
         });
     </script>
 
+    <script>
+        async function fetchNews() {
+            const apiKey = '1444215f9c194681826edf791c153659';
+            const url = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${apiKey}`;
+        
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            
+            const newsSection = document.getElementById('newsSection');
+            newsSection.innerHTML = '';
+
+            if (data.articles && data.articles.length > 0) {
+                data.articles.forEach(article => {
+                    const articleHTML = `
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card mb-3">
+                                <img src="${article.urlToImage || 'https://via.placeholder.com/150'}" class="card-img-top" alt="News Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">${article.title}</h5>
+                                    <p class="card-text">${article.description || 'No description available.'}</p>
+                                    <a href="${article.url}" class="btn btn-dark" target="_blank">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    newsSection.innerHTML += articleHTML;
+                });
+            } else {
+                newsSection.innerHTML = '<p class="text">No news available. Try again later.</p>';
+            }
+        } catch (error) {
+            console.error('Error fetching news:', error);
+            document.getElementById('newsSection').innerHTML = '<p class="text-danger">Failed to load news. Check the API key or network connection.</p>';
+        }
+    }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
