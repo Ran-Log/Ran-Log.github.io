@@ -2,140 +2,345 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ran-Log's Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ran-Log's Website</title>
+    <link rel="icon" type="image/x-icon" href="Icons/sas.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: #D8BFD8;;" class="text-dark">
-
-    <div class="container mt-4">
-        <h1 class="text-center text-dark fw-bold">Jorge Andrés Beltrán Arancibia</h1>
-
-        <hr style="border: 2px solid #6113aa; opacity: 1;">
-
-        <h2 class="text-secondary"><p class="text-decoration-underline">Professional Info</p></h2>
-
-        <p><strong>Major:</strong> Engineer on Computer Science</p>
-        <p><strong>Year of University Enrollment:</strong> 2021</p>
-        <p><strong>GitHub Profile:</strong> 
-            <a href="https://github.com/Ran-L0g" target="_blank" style="color: #0f71bc;">Click here to go to my GitHub Profile 🐟</a>
-        </p>
-        <p><strong>Art Portfolio:</strong> Ask for the link <br> ┐(￣∀￣)┌</p>
-
-        <hr style="border: 2px solid #6113aa; opacity: 1;">
-
-        <h2 class="text-secondary"><p class="text-decoration-underline">Personal Summary</p></h2>
-        <p>
-            - I'm an Engineer on Computer Science Student at Universidad de los Andes (Chile).<br>
-            - Since 2024, I started learning Computer Science, from programming languages (Python, C++, JavaScript, SQL, etc) to how computers work.<br>
-            - I am extremely passionate about Data Science and will likely work in that field.<br>
-            - I also work as a Hobbyist Digital Artist, specializing in character designs (Still learning backgrounds σ(￣、￣〃)).
-        </p>
-
-        <hr style="border: 2px solid #6113aa; opacity: 1;">
-
-        <h2 class="text-secondary"><p class="text-decoration-underline">Skills</p></h2>
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped text-center">
-                <thead class="thead-light">
-                    <tr>
-                        <th>Skill</th>
-                        <th>Level</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Python</td><td>Medium</td></tr>
-                    <tr><td>C++</td><td>Medium</td></tr>
-                    <tr><td>JavaScript</td><td>Basic</td></tr>
-                    <tr><td>HTML/CSS</td><td>Basic</td></tr>
-                    <tr><td>Excel</td><td>Advanced</td></tr>
-                    <tr><td>SQL</td><td>Expert</td></tr>
-                    <tr><td>Ruby</td><td>No knowledge</td></tr>
-                    <tr><td>English</td><td>Almost Native, C2</td></tr>
-                    <tr><td>Spanish</td><td>Native</td></tr>
-                    <tr><td>Japanese</td><td>Basic</td></tr>
-                    <tr><td>Digital Art</td><td>Advanced</td></tr>
-                    <tr><td>Video Editing</td><td>Above Medium</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <hr style="border: 2px solid #6113aa; opacity: 1;">
-
-
-        <div class="mb-3">
-            <label for="inputField" class="form-label">Enter text here:</label>
-            <input type="text" id="inputField" class="form-control" placeholder="Type something...">
-        </div>
-        <button class="btn btn-dark" onclick="changeContent()">Change Content</button>
-
-        <div id="changeableSection" class="mt-4 text-center">
-            <h3 class="text-secondary">Whoa, This part changes when you press the button. <br> (*￣▽￣)b</h3>
-        </div>
 
 
 
-        <hr style="border: 2px solid #6113aa; opacity: 1;">
+<body class="bg-light">
 
-        <h2 class="text-secondary"><p class="text-decoration-underline">Latest Tech News</p></h2>
-        <button class="btn btn-dark mb-3" onclick="fetchNews()">Load News</button>
+    <div class="container">
 
-        <div id="newsSection" class="row">
-        </div>
 
-    </div>
-
-    <script>
-        function changeContent() {
-            var input = document.getElementById('inputField').value;
-            document.getElementById('changeableSection').innerHTML = "<h3 class='text-secondary'>" + input + "</h3>";
-        }
-
-        document.getElementById('inputField').addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                changeContent();
-            }
-        });
-    </script>
-
-    <script>
-        async function fetchNews() {
-            const apiKey = '1444215f9c194681826edf791c153659';
-            const url = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${apiKey}`;
-        
-        try {
-            const response = await fetch(url);
-            const data = await response.json();
+        <div class="container mt-5">
+            <div class="bubble-container">
+                <h1 class="text-center fw-bold">Jorge Beltrán (Ran for short)</h1>
             
-            const newsSection = document.getElementById('newsSection');
-            newsSection.innerHTML = '';
 
-            if (data.articles && data.articles.length > 0) {
-                data.articles.forEach(article => {
-                    const articleHTML = `
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card mb-3">
-                                <img src="${article.urlToImage || 'https://via.placeholder.com/150'}" class="card-img-top" alt="News Image">
-                                <div class="card-body">
-                                    <h5 class="card-title">${article.title}</h5>
-                                    <p class="card-text">${article.description || 'No description available.'}</p>
-                                    <a href="${article.url}" class="btn btn-dark" target="_blank">Read More</a>
+
+                <h3 class="text-custom">
+                    <p class="text-decoration-underline">Some Relevant Info</p>
+                </h3>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card relevant-info-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Major / Studying:</h5>
+                                <p class="card-text">Engineer on Computer Science</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6">
+                        <div class="card relevant-info-card">
+                            <div class="card-body">
+                                <h5 class="card-title">GitHub Profile:</h5>
+                                <a href="https://github.com/Ran-L0g" target="_blank" class="btn btn-custom">Check it out 🐟</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6">
+                        <div class="card relevant-info-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Year of Enrollment:</h5>
+                                <p class="card-text">2021</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6">
+                        <div class="card relevant-info-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Art Portfolio:</h5>
+                                <p class="card-text">Ask for the link ┐(￣∀￣)┌</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="custom-border"> </div>
+
+
+                <h3 class="text-custom">
+                    <p class="text-decoration-underline">Some Stuff About Me:</p>
+                </h3>
+                <p>
+                    - I'm studying an Engineer on Computer Science Student at Universidad de los Andes (Chile).<br>
+                    - Since 2024, I started learning Computer Science, from programming languages (Python, C++, JavaScript, SQL, etc) to how computers work.<br>
+                    - I am extremely passionate about Data Science and will likely work in that field.<br>
+                    - I also work as a Hobbyist Digital Artist, specializing in character designs (Still learning backgrounds σ(￣、￣〃)).
+                </p>
+
+
+                <div class="custom-border"> </div>
+
+                <h3 class="text-custom">
+                    <p class="text-decoration-underline">Random Stuff :P</p>
+                </h3>
+                <ul>
+                    <li>I like music a lot, you'll find me buying a lot of CDs.</li>
+                    <li>Kirby Planet Robobot is my favorite game AND THE BEST KIRBY GAME EVER, COME ON, FIGHT ME!!!!</li>
+                    <li>Favorite movie? The Lego Movie</li>
+                    <li>I might like videogames, I don't have over 1k games on steam for nothing</li>
+                    <li>I also like anime and manga. I collect them too.</li>
+                    <li>So yeah, really nerd person.</li>
+                    <li>Introverted AF</li>
+                    <li>I've been drawing for 6 years, and it's been a source of income for 1 year.</li>
+                    <li>I might or might not like Oneshot a lot, the game.</li>
+                </ul>
+
+                <div class="custom-border"> </div>
+
+
+                <section class="Skills" id="Skills">
+                    <h3>Skills</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="skill">
+                                <span>Python</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 75%;">75%</div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>C++</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" style="width: 60%;">60%</div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>JavaScript</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width: 30%;">30%</div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>HTML/CSS</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width: 30%;">30%</div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>Excel</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 95%;">95%</div>
                                 </div>
                             </div>
                         </div>
-                    `;
-                    newsSection.innerHTML += articleHTML;
-                });
-            } else {
-                newsSection.innerHTML = '<p class="text">No news available. Try again later.</p>';
+
+                        <div class="col-md-6">
+                            <div class="skill">
+                                <span>SQL</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 85%;">85%</div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>Ruby</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width: 1%;">1%</div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>English</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 100%;">100%</div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>Japanese</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width: 30%;">30%</div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>Digital Art</span>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 70%;">70%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <div class="custom-border"> </div>
+
+
+                <h1 class="text-decoration-underline">Here's some random drawings I really liked making</h1>
+
+                <div id="drawingCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" style="text-align: center;">
+                        <div class="carousel-item active">
+                            <a>
+                                <img src="Drawings/real color.png" class="d-block w-75 mx-auto" alt="Drawing 1" style="max-width: 100%; height: auto;">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a>
+                                <img src="Drawings/12-14,2.png" class="d-block w-75 mx-auto alt="Drawing 2" style="max-width: 100%; height: auto;">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a>
+                                <img src="Drawings/BG13.png" class="d-block w-75 mx-auto alt="Drawing 3" style="max-width: 100%; height: auto;">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a>
+                                <img src="Drawings/12-26.png" class="d-block w-75 mx-auto alt="Drawing 4" style="max-width: 100%; height: auto;">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a>
+                                <img src="Drawings/11-23-2.png" class="d-block w-75 mx-auto alt="Drawing 5" style="max-width: 100%; height: auto;">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a>
+                                <img src="Drawings/01-26-2.png" class="d-block w-75 mx-auto alt="Drawing 6" style="max-width: 100%; height: auto;">
+                            </a>
+                        </div>
+                    </div>
+                
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#drawingCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#drawingCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                
+
+                <div class="custom-border"> </div>
+
+
+                <div class="mb-3">
+                    <label for="inputField" class="form-label">Enter text here:</label>
+                    <input type="text" id="inputField" class="form-control" placeholder="Type something...">
+                </div>
+                <button class="btn btn-custom" onclick="changeContent()">Change Content</button>
+
+                <div id="changeableSection" class="mt-4 text-center">
+                    <h3 class="text-custom">Whoa, This part changes when you press the button. <br> (*￣▽￣)b</h3>
+                </div>
+
+
+                <div class="custom-border"> </div>
+
+
+                <h3 class="text-custom">
+                    <p class="text-decoration-underline">Latest Tech News</p>
+                </h3>
+                <button class="btn btn-custom mb-3" onclick="fetchNews()">Load News</button>
+
+                <div id="newsSection" class="row">
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function changeContent() {
+                var input = document.getElementById('inputField').value;
+                document.getElementById('changeableSection').innerHTML = "<h3 class='text-custom'>" + input + "</h3>";
             }
-        } catch (error) {
-            console.error('Error fetching news:', error);
-            document.getElementById('newsSection').innerHTML = '<p class="text-danger">Failed to load news. Check the API key or network connection.</p>';
-        }
-    }
-    </script>
 
+            document.getElementById('inputField').addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    changeContent();
+                }
+            });
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            async function fetchNews() {
+                const apiKey = '1444215f9c194681826edf791c153659';
+                const url = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${apiKey}`;
+
+                try {
+                    const response = await fetch(url);
+                    const data = await response.json();
+
+                    const newsSection = document.getElementById('newsSection');
+                    newsSection.innerHTML = '';
+
+                    if (data.articles && data.articles.length > 0) {
+                        data.articles.forEach(article => {
+                            const articleHTML = `
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card mb-3">
+                                        <img src="${article.urlToImage || 'https://via.placeholder.com/150'}" class="card-img-top" alt="News Image">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${article.title}</h5>
+                                            <p class="card-text">${article.description || 'No description available.'}</p>
+                                            <a href="${article.url}" class="btn btn-dark" target="_blank">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            newsSection.innerHTML += articleHTML;
+                        });
+                    } else {
+                        newsSection.innerHTML = '<p>No news available.</p>';
+                    }
+                } catch (error) {
+                    console.error('Error fetching news:', error);
+                    document.getElementById('newsSection').innerHTML = '<p>Sorry, there was an error fetching the news.</p>';
+                }
+            }
+        </script>
+
+        <section class="contact" id="contact">
+            <div class="contact">
+                <div class="contact-overlay">
+                    <div class="contact-section">
+                        <h4>Contact</h4>
+                        <p>Here are some other sites where I'm at.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://github.com/Ran-L0g" target="_blank" rel="noopener noreferrer">
+                    <img src="Icons/github_icon.png" alt="Spotify" style="width: 30px; height: 30px;">
+                </a>
+                
+                <a href="https://www.instagram.com/jabaranc" target="_blank" rel="noopener noreferrer">
+                    <img src="Icons/Instagram_icon.png" alt="Spotify" style="width: 30px; height: 30px;">
+                </a>
+                
+                <a href="https://open.spotify.com/user/12185423343" target="_blank" rel="noopener noreferrer">
+                    <img src="Icons/spotify-icon.png" alt="Spotify" style="width: 30px; height: 30px;">
+                </a>
+
+                <a href="https://steamcommunity.com/id/CosmicTotem" target="_blank" rel="noopener noreferrer">
+                    <img src="Icons/steam-icon.png" alt="Steam" style="width: 50px; height: 30px;">
+                </a>
+            </div>
+            <p>© 2025 Ran-Log</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
+
+</html>

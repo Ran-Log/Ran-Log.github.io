@@ -1,93 +1,82 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #c998b97d;
+h1, h2, h3, h4, h5, h6 {
     color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
     text-align: center;
-    color: #db3939;
-    margin-top: 20px;
 }
 
-h2 {
-    color: #ad4444;
-    margin-top: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
+.bubble-container h1, .bubble-container h2, .bubble-container h3 {
+    color: #6113aa;
 }
 
-h3 {
-    text-align: center;
-    color: #ad4444;
+.bubble-container {
+    background-color: rgba(180, 167, 189, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
 }
 
-h1, h2{
-    -webkit-text-stroke: 1px #00000087;
+body {
+    background-image: url('Drawings/BG12.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-    margin-left: 100px;  
-    margin-right: 100px;
+.custom-border {
+    border-top: 4px solid #6113aa;
+    margin: 10px 0;
 }
 
-table {
-    width: 70%;
-    margin: 30px auto;
-    border-collapse: collapse;
+.bubble-container h1, .bubble-container h2, .bubble-container p {
+    margin-top: 10px;
 }
 
-table, th, td {
-    border: 1px solid #ad4444;
-}
-
-th, td {
-    padding: 12px;
-    text-align: center;
-}
-
-th {
-    background-color: #b65959;
+.contact-section h4, .contact-section p {
     color: white;
 }
 
-td {
-    background-color: #e48c8c8a ; 
+footer p {
+    color: white;
 }
 
-td:hover {
-    background-color: #cb8d8d ;
+.relevant-info-card {
+    background-color: rgba(180, 167, 189, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
 }
 
+.relevant-info-card .card-body {
+    color: #333;
+}
 
-hr {
+.relevant-info-card .card-title {
+    color: #6113aa;
+}
+
+.btn-custom {
+    background-color: #6113aa;
+    color: white;
     border: none;
-    border-top: 2px solid #6113aa;
-    margin: 20px auto;
-    width: 80%;
-}
-
-.button {
-    background-color: #ad448a;
-    color: white;
     padding: 10px 20px;
-    border: none;
+    font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    display: block;
+    margin: 0 auto;
 }
 
-.button:hover {
-    background-color: #9d0d66;
+.btn-custom:hover {
+    background-color: #4b0e8e;
 }
 
-.input-section {
-    margin: 20px auto;
-    text-align: center;
-    margin-left: 100px;  
-    margin-right: 100px;
+.text-custom {
+    color: #6113aa;
+}
+
+.social-links {
+    margin-left: 100px;
+    display: flex;
+    gap: 15px;
 }
