@@ -80,3 +80,19 @@ footer p {
     display: flex;
     gap: 15px;
 }
+
+
+.accordion-button {
+    background-color: rgba(206, 186, 219, 0.838);
+    color: #333;
+}
+
+.accordion-body {
+    background-color: rgba(180, 167, 189, 0.8);
+    color: #333;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #6113aa;
+    color: white;
+}
