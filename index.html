@@ -272,12 +272,14 @@
             });
 
             async function fetchNews() {
-                const apiKey = '1444215f9c194681826edf791c153659';
-                const url = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${apiKey}`;
+                const apiKey = 'ec710cb67fb4454b878fbd61e34dc8a0';
+                const url = `https://newsapi.org/v2/top-headlines?category=technology&apiKey=ec710cb67fb4454b878fbd61e34dc8a0`;
 
                 try {
                     const response = await fetch(url);
                     const data = await response.json();
+                    console.log(data);
+
 
                     const newsSection = document.getElementById('newsSection');
                     newsSection.innerHTML = '';
@@ -340,7 +342,6 @@
             <p>© 2025 Ran-Log</p>
         </footer>
     </div>
-    <script src="script.js"></script>
 </body>
 
 </html>
